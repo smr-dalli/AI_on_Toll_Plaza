@@ -1,0 +1,127 @@
+/* body {
+  background-image: url("../istockphoto-922547712-612x612.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+} */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+.navbar-brand {
+  font-size: 24px !important;
+}
+body {
+  color: white !important;
+  background: rgb(5, 23, 49);
+  background: linear-gradient(
+    180deg,
+    rgba(5, 23, 49, 1) 0%,
+    rgba(5, 23, 49, 1) 29%,
+    rgba(35, 78, 140, 1) 92%
+  );
+  height: 100vh;
+  width: 100%;
+}
+body img {
+  position: absolute;
+  z-index: -100;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 80vh;
+  margin: auto auto;
+}
+.content h2 {
+  font-size: 70px;
+  margin: 10% 0px 4% 0px;
+  text-align: center;
+}
+.content p {
+  text-align: center;
+  font-size: 20px;
+}
+.custom-file-input {
+  width: 100% !important;
+
+  margin: 50px 1%;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::after {
+  content: "Upload image";
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin: 0 10px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  width: 180px;
+  height: 35px;
+  text-align: center;
+  padding: auto 0px;
+}
+.custom-file-input:hover::after {
+  border-color: black;
+}
+.custom-file-input:active::after {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.submit {
+  display: flex;
+  margin: auto;
+}
+input[type="submit"] {
+  padding: 5px 45px;
+  background: #ccc;
+  width: 200px;
+  font-size: 24px;
+  height: 50px;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid #999;
+  color: white;
+  letter-spacing: 0.1em;
+}
+.submit:hover {
+  border-color: black;
+}
+.navbar {
+  color: white !important;
+}
+#navbarNavDropdown {
+  margin-left: 70%;
+}
+.result_image {
+  width: 500px;
+  height: 300px;
+}
+.result_image img {
+  width: 500px;
+  height: 300px;
+  object-fit: contain;
+}
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
