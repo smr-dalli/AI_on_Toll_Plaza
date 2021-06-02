@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>number_plate</title>
+  </head>
+  <body>
+    <h2 style="text-align: center">AI on Toll Plaza</h2>
+    <!-- <form
+      style="text-align: center"
+      action="/number_plate"
+      method="POST"
+      enctype="multipart/form-data"
+    > -->
+      <!-- <input type="file" id="number_plate" name="file_1" />
+      <input class="" type="submit" /> -->
+      <h4  style="text-align: center">Licence plate detection</h4>
+      <div class='results'>
+        <div class='result_image' >
+          <img  src="{{ image_path }}" alt="User Image" />
+        </div>
+
+        <div>
+          <h4>Number plate extraction:</h4>
+          <p>The number plate of the vehicle: {{ number_palte_text}}</p> 
+          <h4>Number plate validation:</h4>
+          <p>{{ final_statement}}</p>
+          
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
