@@ -1,0 +1,10 @@
+Python == 3.8.8
+Flask == 1.1.2
+Werkzeug == 1.0.1
+cv2 == 4.5.2
+re == 2.2.1
+numpy == 1.20.3
+sqlite3 == 2.6.0
+pytesseract == 0.3.7
+PIL == 7.2.0
+
