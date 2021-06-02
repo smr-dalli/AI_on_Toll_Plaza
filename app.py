@@ -34,7 +34,7 @@ class LicensePlateDetector:
         self.roi_image = None
         
         
-    def detect(self, img_path: str):
+    def detect(self, img_path: str,image_name: str):
         orig = cv2.imread(img_path)
         self.img = orig
         img = orig.copy()
@@ -77,7 +77,7 @@ class LicensePlateDetector:
         self.fig_image = img
         self.coordinates = (x, y, w, h)
         lpd.crop_plate()
-        cv2.imwrite('static/detected.jpg',self.fig_image)
+        cv2.imwrite('static/test.jpg',self.fig_image)
 
         cropped_image = cv2.cvtColor(lpd.roi_image, cv2.COLOR_BGR2RGB)
 
@@ -114,6 +114,11 @@ def home():
 def number_plate():
 
     if request.method == 'POST':
+        
+        # for file in os.listdir('static/'):
+        #     if file.endswith('.jpg'):
+        #         os.remove(file)
+
         files = request.files['file_1']
         img_bytes = files.read()
 
@@ -121,7 +126,8 @@ def number_plate():
         image.save('temp/image.jpg')
         
         # print(type(img))
-        extracted_text = lpd.detect('temp/image.jpg')
+        image_name = str(os.urandom(10)) + '.jpg'
+        extracted_text = lpd.detect('temp/image.jpg', image_name)
         # # Plot original image with rectangle around the plate
         # plt.figure(figsize=(24, 24))
         #user_image= plt.imshow(cv2.cvtColor(lpd.fig_image, cv2.COLOR_BGR2RGB))
@@ -152,9 +158,17 @@ def number_plate():
 
 
 
-    return render_template('number_plate.html',image_path = 'static/detected.jpg',number_palte_text = extracted_text,final_statement = final_statement)
+    return render_template('number_plate.html',image_path = 'static/test.jpg', number_palte_text = extracted_text, final_statement = final_statement)
 
-
+@app.after_request
+def add_header(response):
+    """
+    Add headers to both force latest IE rendering engine or Chrome Frame,
+    and also to cache the rendered page for 10 minutes.
+    """
+    
+    response.headers['Cache-Control'] = 'no-cache, no-store'
+    return response 
 
 
 if __name__ == '__main__':
