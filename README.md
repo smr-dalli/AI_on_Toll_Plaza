@@ -2,6 +2,9 @@
 # AI on Toll Plaza
 ![alt text](https://github.com/smr-dalli/AI_on_Toll_Plaza/blob/main/readme%20images/istockphoto-922547712-612x612.jpg)
 
+## Live demo of the working of the model
+![alt text](https://github.com/smr-dalli/AI_on_Toll_Plaza/blob/main/ezgif.com-gif-maker.gif)
+
 ## Why we need AI at Tolls?
 ![Traffic at tolls in India](https://github.com/smr-dalli/AI_on_Toll_Plaza/blob/main/readme%20images/traffic.PNG)
 * In most countries, traffic is a common problem with the increased mobility.
